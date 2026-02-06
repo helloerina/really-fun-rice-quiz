@@ -20,12 +20,12 @@ const RiceQuiz = () => {
     },
     {
       id: 2,
-      question: "Rice is believed to have been first domesticated around:",
+      question: "How do you usually enjoy rice?",
       options: [
-        { text: "8,000-10,000 years ago in China", value: "jasmine" },
-        { text: "5,000 years ago in the Indian subcontinent", value: "basmati" },
-        { text: "2,000 years ago in Italy", value: "risotto" },
-        { text: "Ancient times across multiple regions", value: "purple" }
+        { text: "A comforting everyday staple", value: "jasmine" },
+        { text: "A base for a well-balanced meal", value: "basmati" },
+        { text: "The star of the dish", value: "risotto" },
+        { text: "As something nutritious", value: "purple" }
       ]
     },
     {
@@ -40,56 +40,56 @@ const RiceQuiz = () => {
     },
     {
       id: 4,
-      question: "What draws you most to food and culture?",
+      question: "What draws you most to food experiences?",
       options: [
-        { text: "Aromatic, comforting traditions", value: "jasmine" },
-        { text: "Elegant, time-honored practices", value: "basmati" },
-        { text: "Hands-on craftsmanship and technique", value: "risotto" },
-        { text: "Nutritional innovation and wellness", value: "purple" }
+        { text: "Warm, comforting flavors and familiar smells", value: "jasmine" },
+        { text: "Simple rituals and time-tested ways of cooking", value: "basmati" },
+        { text: "Making food by hand and learning the process", value: "risotto" },
+        { text: "Exploring new ideas around health and nutrition", value: "purple" }
       ]
     },
     {
       id: 5,
       question: "Rice feeds more than half of the world's population. What does this fact inspire in you?",
       options: [
-        { text: "Appreciation for simple, essential connections", value: "jasmine" },
-        { text: "Respect for cultural diversity and heritage", value: "basmati" },
-        { text: "Wonder at human ingenuity and adaptation", value: "risotto" },
-        { text: "Curiosity about sustainable food systems", value: "purple" }
+        { text: "How something simple can quietly support everyday life", value: "jasmine" },
+        { text: "How many different meals and traditions it shows up in", value: "basmati" },
+        { text: "How humans have adapted food to fit so many environments", value: "risotto" },
+        { text: "How important it is to think about food access and sustainability", value: "purple" }
       ]
     }
   ];
 
   const results = {
     jasmine: {
-      name: "Jas the Comfy Companion",
+      name: "Jasmine, the Comfy Companion",
       displayName: "Jasmine",
       image: "/images/Jasmine.svg",
       tagline: "You're warm, welcoming, and naturally bring people together. You create comfort wherever you go.",
       history: "Jasmine rice was born in Thailand over 2,000 years ago. It gets its name from the sweet aroma it releases while cooking—just like jasmine flowers. This rice became the heart of Southeast Asian meals.",
-      funFact: "Fresh jasmine rice smells so good that warehouses storing it smell like flower gardens! The scent comes from a natural compound also found in pandan leaves.",
-      reflection: "What simple pleasures help create a sense of togetherness in your life?"
+      funFact: "Fresh jasmine rice smells so good that warehouses storing it would smell like flower gardens! The scent comes from a natural compound also found in pandan leaves.",
+      reflection: "What simple moments create a feeling of togetherness for you?"
     },
     basmati: {
-      name: "Bas the Elegant Queen",
+      name: "Basmati, the Elegant Queen",
       displayName: "Basmati",
       image: "/images/Basmati.svg",
       tagline: "You appreciate the finer things. You're elegant, refined, and you know good things take time.",
       history: "Basmati means 'queen of fragrance' in Sanskrit. It's been grown in the foothills of the Himalayas for thousands of years, prized in royal feasts across India and Pakistan.",
       funFact: "Basmati rice nearly doubles in length when cooked but barely gets wider. The older it is, the better it tastes—aged basmati (stored for a year+) is the most prized.",
-      reflection: "What aspects of your life have become richer as time has passed?"
+      reflection: "What aspects of your life have become more valuable as time has passed?"
     },
     risotto: {
-      name: "Ris the Patient Creator",
+      name: "Risotto, the Slow Burn",
       displayName: "Risotto", 
       image: "/images/Risotto.svg",
       tagline: "You believe good things take time. You're patient, present, and attentive, especially when something matters to you. You trust the process.",
       history: "Introduced to Italy in the 14th-15th century. Northern Italy's wetlands turned out to be perfect for growing short-grain rice.",
-      funFact: "Stirring releases starch, creating risotto's creamy texture without any cream.",
+      funFact: "Stirring releases starch, creating risotto's creamy texture without using any cream.",
       reflection: "What in your life could use more time and care?"
     },
     purple: {
-      name: "Purp the Forbidden Icon",
+      name: "Forbidden, the Iconic Rizzer",
       displayName: "Purple",
       image: "/images/Purple.svg",
       tagline: "You're one-of-a-kind. You seek out the unique, value what's authentic, and believe good things should be accessible to all.",
@@ -241,7 +241,7 @@ const RiceQuiz = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-black mb-2 drop-shadow-lg">
               Which Rice Are You Feeling Right Now?
             </h1>
-            <p className="text-black font-medium drop-shadow-md">Discover your rice personality</p>
+            <p className="text-black font-medium drop-shadow-md">your rice moment</p>
           </div>
 
           <div className="bg-white/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-8 border border-white/60">
