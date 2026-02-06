@@ -239,7 +239,7 @@ const RiceQuiz = () => {
         <div className="max-w-2xl w-full">
           <div className="mb-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-black mb-2 drop-shadow-lg">
-              Which Rice Are You?
+              Which Rice Are You Feeling Right Now?
             </h1>
             <p className="text-black font-medium drop-shadow-md">Discover your rice personality</p>
           </div>
@@ -303,7 +303,7 @@ const RiceQuiz = () => {
 
           <div className="mt-6 text-center">
             <p className="text-sm text-black font-medium drop-shadow-lg bg-white/50 backdrop-blur-sm rounded-full px-4 py-2 inline-block">
-              Vibe coded by Erina Suzuki </br> INF1005H: Play-based programming for Libraries
+              Vibe coded by Erina Suzuki <br /> INF1005H: Play-based programming for Libraries
             </p>
           </div>
         </div>
