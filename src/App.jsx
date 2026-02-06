@@ -141,57 +141,60 @@ const RiceQuiz = () => {
         <PaddyFieldBackground />
         <div className="min-h-screen p-4 md:p-8 flex items-center justify-center relative z-10">
           <div className="max-w-md w-full">
-            {/* Card */}
-            <div className="bg-[#FAFAE6] rounded-3xl p-6 shadow-lg border-4 border-white">
+            {/* Glassmorphic Card */}
+            <div className="bg-white/40 backdrop-blur-md rounded-3xl p-6 shadow-2xl border border-white/60">
               {/* Header with name and stars */}
               <div className="flex items-center justify-between mb-6">
-                <div className="bg-white border-3 border-black rounded-full px-6 py-3">
+                <div className="bg-white/80 backdrop-blur-sm border-2 border-black/20 rounded-full px-6 py-3 shadow-lg">
                   <h1 className="text-2xl font-bold text-black">{result.displayName}</h1>
                 </div>
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400 drop-shadow-lg" />
                   ))}
                 </div>
               </div>
 
-              {/* Pixel character image */}
+              {/* Pixel character image with shadow */}
               <div className="flex justify-center mb-4">
-                <img 
-                  src={result.image} 
-                  alt={result.displayName}
-                  className="w-32 h-32 object-contain"
-                />
+                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+                  <img 
+                    src={result.image} 
+                    alt={result.displayName}
+                    className="w-32 h-32 object-contain drop-shadow-2xl"
+                    style={{ filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.3))' }}
+                  />
+                </div>
               </div>
 
-              <hr className="my-6 border-gray-300" />
+              <hr className="my-6 border-white/40" />
 
               {/* Fun name */}
-              <h2 className="text-xl font-bold text-black text-center mb-4">
+              <h2 className="text-xl font-bold text-black text-center mb-4 drop-shadow-md">
                 {result.name}
               </h2>
 
               {/* Tagline */}
-              <p className="text-base font-medium text-black leading-relaxed mb-6">
+              <p className="text-base font-medium text-black leading-relaxed mb-6 drop-shadow-sm">
                 {result.tagline}
               </p>
 
               {/* History Section */}
               <div className="mb-4">
-                <button className="bg-gray-200 border-2 border-gray-400 rounded-full px-5 py-2 text-sm font-bold text-black mb-3">
+                <button className="bg-white/60 backdrop-blur-sm border-2 border-black/20 rounded-full px-5 py-2 text-sm font-bold text-black mb-3 shadow-md">
                   History
                 </button>
-                <p className="text-sm text-black leading-relaxed">
+                <p className="text-sm text-black leading-relaxed bg-white/30 backdrop-blur-sm rounded-lg p-3">
                   {result.history}
                 </p>
               </div>
 
               {/* Fun Fact Section */}
               <div className="mb-4">
-                <button className="bg-gray-200 border-2 border-gray-400 rounded-full px-5 py-2 text-sm font-bold text-black mb-3 flex items-center gap-2">
+                <button className="bg-white/60 backdrop-blur-sm border-2 border-black/20 rounded-full px-5 py-2 text-sm font-bold text-black mb-3 flex items-center gap-2 shadow-md">
                   <span>✿</span> fun fact!
                 </button>
-                <div className="border-2 border-dashed border-gray-400 rounded-lg p-3 bg-white">
+                <div className="border-2 border-dashed border-black/30 rounded-lg p-3 bg-white/50 backdrop-blur-sm shadow-md">
                   <p className="text-sm text-black leading-relaxed">
                     {result.funFact}
                   </p>
@@ -200,10 +203,10 @@ const RiceQuiz = () => {
 
               {/* Reflection Section */}
               <div className="mb-6">
-                <button className="bg-gray-200 border-2 border-gray-400 rounded-full px-5 py-2 text-sm font-bold text-black mb-3">
+                <button className="bg-white/60 backdrop-blur-sm border-2 border-black/20 rounded-full px-5 py-2 text-sm font-bold text-black mb-3 shadow-md">
                   Reflection
                 </button>
-                <p className="text-sm text-black leading-relaxed italic">
+                <p className="text-sm text-black leading-relaxed italic bg-white/30 backdrop-blur-sm rounded-lg p-3">
                   {result.reflection}
                 </p>
               </div>
@@ -211,14 +214,14 @@ const RiceQuiz = () => {
               {/* Restart button */}
               <button
                 onClick={restart}
-                className="w-full bg-black text-white font-bold py-3 px-6 rounded-full hover:bg-gray-800 transition-colors duration-200"
+                className="w-full bg-black/80 backdrop-blur-sm text-white font-bold py-3 px-6 rounded-full hover:bg-black transition-all duration-200 shadow-xl"
               >
                 Take Quiz Again
               </button>
             </div>
 
             {/* Footer text */}
-            <p className="text-center text-sm text-black mt-4 font-medium">
+            <p className="text-center text-sm text-black mt-4 font-medium drop-shadow-lg bg-white/50 backdrop-blur-sm rounded-full px-4 py-2 inline-block mx-auto w-full">
               what type of rice are you?
             </p>
           </div>
@@ -235,22 +238,22 @@ const RiceQuiz = () => {
       <div className="min-h-screen p-4 md:p-8 flex items-center justify-center relative z-10">
         <div className="max-w-2xl w-full">
           <div className="mb-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-2">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-2 drop-shadow-lg">
               Which Rice Are You?
             </h1>
-            <p className="text-black font-medium">Discover your rice personality</p>
+            <p className="text-black font-medium drop-shadow-md">Discover your rice personality</p>
           </div>
 
-          <div className="bg-[#FAFAE6] rounded-3xl shadow-lg p-6 md:p-8 border-4 border-white">
+          <div className="bg-white/40 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-8 border border-white/60">
             {/* Progress bar */}
             <div className="mb-8">
               <div className="flex justify-between text-sm text-black font-bold mb-2">
                 <span>Question {currentQuestion + 1} of {questions.length}</span>
                 <span>{Math.round(progress)}%</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 border-2 border-gray-300">
+              <div className="w-full bg-white/50 backdrop-blur-sm rounded-full h-3 border-2 border-white/60 shadow-inner">
                 <div
-                  className="bg-[#C8E632] h-full rounded-full transition-all duration-300 border-r-2 border-gray-400"
+                  className="bg-[#C8E632] h-full rounded-full transition-all duration-300 shadow-lg"
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -258,7 +261,7 @@ const RiceQuiz = () => {
 
             {/* Question */}
             <div className="mb-8">
-              <h2 className="text-xl md:text-2xl font-bold text-black mb-6">
+              <h2 className="text-xl md:text-2xl font-bold text-black mb-6 drop-shadow-md">
                 {questions[currentQuestion].question}
               </h2>
 
@@ -267,10 +270,10 @@ const RiceQuiz = () => {
                   <button
                     key={index}
                     onClick={() => handleAnswer(option.value)}
-                    className="w-full text-left p-4 rounded-2xl border-3 border-black bg-white hover:bg-[#C8E632] hover:scale-[1.02] transition-all duration-200 group shadow-md"
+                    className="w-full text-left p-4 rounded-2xl border-2 border-black/20 bg-white/60 backdrop-blur-sm hover:bg-[#C8E632]/80 hover:scale-[1.02] transition-all duration-200 group shadow-lg"
                   >
                     <div className="flex items-center">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold mr-3 text-sm">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold mr-3 text-sm shadow-md">
                         {String.fromCharCode(65 + index)}
                       </span>
                       <span className="text-black font-medium group-hover:font-bold">
@@ -287,7 +290,7 @@ const RiceQuiz = () => {
               <button
                 onClick={handleBack}
                 disabled={currentQuestion === 0}
-                className="flex items-center text-black font-bold hover:text-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors duration-200"
+                className="flex items-center text-black font-bold hover:text-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors duration-200 drop-shadow-md"
               >
                 <ArrowLeft className="w-5 h-5 mr-2" />
                 Back
@@ -298,8 +301,10 @@ const RiceQuiz = () => {
             </div>
           </div>
 
-          <div className="mt-6 text-center text-sm text-black font-medium">
-            <p>A thoughtful quiz experience for reflection and learning</p>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-black font-medium drop-shadow-lg bg-white/50 backdrop-blur-sm rounded-full px-4 py-2 inline-block">
+              A thoughtful quiz experience for reflection and learning
+            </p>
           </div>
         </div>
       </div>
