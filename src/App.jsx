@@ -222,7 +222,7 @@ const RiceQuiz = () => {
 
             {/* Footer text */}
             <p className="text-center text-sm text-black mt-4 font-medium drop-shadow-lg bg-white/50 backdrop-blur-sm rounded-full px-4 py-2 inline-block mx-auto w-full">
-              what type of rice are you?
+              Vibe coded by Erina Suzuki 
             </p>
           </div>
         </div>
