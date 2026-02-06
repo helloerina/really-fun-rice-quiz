@@ -303,7 +303,7 @@ const RiceQuiz = () => {
 
           <div className="mt-6 text-center">
             <p className="text-sm text-black font-medium drop-shadow-lg bg-white/50 backdrop-blur-sm rounded-full px-4 py-2 inline-block">
-              A thoughtful quiz experience for reflection and learning
+              Vibe coded by Erina Suzuki </br> INF1005H: Play-based programming for Libraries
             </p>
           </div>
         </div>
